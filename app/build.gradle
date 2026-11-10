@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.kultrshok.scrubgnome.face'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.kultrshok.scrubgnome.face'
+        minSdk 29          // Android 10+
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // Release signing comes from environment variables (set by GitHub Actions from
+    // encrypted repo secrets, or by you locally). The key itself never goes in git.
+    def ksPath = System.getenv("SG_KEYSTORE_PATH")
+    signingConfigs {
+        release {
+            if (ksPath) {
+                storeFile file(ksPath)
+                storePassword System.getenv("SG_KEYSTORE_PASS")
+                keyAlias System.getenv("SG_KEY_ALIAS")
+                keyPassword System.getenv("SG_KEY_PASS")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (ksPath) signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // Plain Java + Android framework only. No third-party libraries, no network.
+}

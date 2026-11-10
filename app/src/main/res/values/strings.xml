@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Scrubgnome-Face</string>
+    <string name="share_label">Scrub with Twig</string>
+    <string name="twig_intro">Twig here, photo edition! Every picture is a little tattletale: where you stood, when, which phone, sometimes even a tiny copy of the shot BEFORE you cropped it. Hand me some photos and I\'ll make them forget all that. Not one pixel changes, and nothing leaves your phone. I don\'t even HAVE internet.</string>
+    <string name="footer">Strips hidden photo metadata: GPS, time, phone model, serial numbers, owner names, thumbnails, edit history, motion-photo videos. Lossless: the picture itself is never re-encoded.</string>
+</resources>
