@@ -21,6 +21,8 @@ Scrubgnome-Face is the photo member of the Scrubgnome family, alongside desktop
 
 **Privacy promise:** the Android app has **no internet permission at all**. Everything happens on your phone.
 
+**Questions or problems?** See the [FAQ](FAQ.md) and [Bug Fixes](Bug%20Fixes.md).
+
 ---
 
 ## What gets removed
