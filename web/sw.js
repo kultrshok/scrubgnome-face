@@ -1,6 +1,6 @@
 // Offline cache for Scrubgnome-Face. Caches only the app's own files;
 // photos are never fetched or stored (they're read locally from the picked file).
-const VERSION = 'sgface-v1';
+const VERSION = 'sgface-v2';
 const FILES = ['./', 'index.html', 'js/app.js', 'js/face.js', 'manifest.webmanifest',
   'icons/twig.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 self.addEventListener('install', e => e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting())));
